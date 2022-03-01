@@ -16,9 +16,9 @@ def LoginPage(request):
             if user.is_active:
                 login(request, user)
                 return redirect('home')
-        else:
-            print("not logged in")
 
+        else:
+            messages.error(request, 'user is not reigstered')
     return render(request, 'registration/login.html')
 
 

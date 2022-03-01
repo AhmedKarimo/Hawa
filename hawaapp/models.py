@@ -56,7 +56,7 @@ class HawaUser(AbstractBaseUser, PermissionsMixin):
     rathe = models.CharField(max_length=500)
 
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     objects = CustomAccountManager()
 
